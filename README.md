@@ -1,3 +1,3 @@
 # Dice-Rolling
 
-simple dice-rolling game in cli with fancy-look.
+simple dice-rolling game in cli/terminal with fancy-look.
