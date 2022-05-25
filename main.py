@@ -60,6 +60,55 @@ def ask(msg: str):
     return True if input(msg).strip().lower() in ("yes", 'y') else False
 
 
+def dice_generator():
+    """this function will generate and print,
+    random dices."""
+
+    # note i use some unicode characters
+    dic = '●'  # dice_char
+    # note: i draw this rectangle using some special,
+    # character in other words (unicode) from wikipedia,
+    # the link:https://en.wikipedia.org/wiki/Box-drawing_character
+
+    # create the dice template.
+    # notice that the dice is function not a string.
+    # dice is callable-object not a string-object.
+    dice = """
+┌─────────┐
+│ {0}  {1}  {2} │
+│ {3}  {4}  {5} │
+│ {6}  {7}  {8} │
+└─────────┘
+""".format
+
+    # note: any dice_char position will contain only,
+    # a dice_char or space to fill the place.
+    # we only have six positions, but if we flip,
+    # ths number six for example we get two six,
+    # and the same thing for two and three.
+    dice_positions = (
+        # one
+        (" ", " ", " ", " ", dic, " ", " ", " ", " "),
+        # two
+        (" ", " ", dic, " ", " ", " ", dic, " ", " "),
+        (dic, " ", " ", " ", " ", " ", " ", " ", dic),
+        # three
+        (" ", " ", dic, " ", dic, " ", dic, " ", " "),
+        (dic, " ", " ", " ", dic, " ", " ", " ", dic),
+        # four
+        (dic, " ", dic, " ", " ", " ", dic, " ", dic),
+        # five
+        (dic, " ", dic, " ", dic, " ", dic, " ", dic),
+        # six
+        (dic, " ", dic, dic, " ", dic, dic, " ", dic),
+        (dic, dic, dic, " ", " ", " ", dic, dic, dic)
+    )
+
+    random_dice = randint(0, len(dice_positions)-1)
+
+    return dice(*dice_positions[random_dice])
+
+
 def main():
     """"""
 
