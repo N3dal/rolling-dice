@@ -23,3 +23,15 @@ from os import name as OS_NAME
 from time import sleep as delay
 
 
+def clear():
+    """wipe the terminal screen."""
+
+    if OS_NAME == "posix":
+        # for *nix machines.
+        system("clear")
+
+    else:
+        # for windows machines.
+        system("cls")
+
+    
