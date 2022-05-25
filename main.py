@@ -65,7 +65,7 @@ def dice_generator():
     random dices."""
 
     # note i use some unicode characters
-    dic = '●'  # dice_char
+    DICE_C = DICE_CHAR = '●'  # dice_char
     # note: i draw this rectangle using some special,
     # character in other words (unicode) from wikipedia,
     # the link:https://en.wikipedia.org/wiki/Box-drawing_character
@@ -88,20 +88,20 @@ def dice_generator():
     # and the same thing for two and three.
     dice_positions = (
         # one
-        (" ", " ", " ", " ", dic, " ", " ", " ", " "),
+        (" ", " ", " ", " ", DICE_C, " ", " ", " ", " "),
         # two
-        (" ", " ", dic, " ", " ", " ", dic, " ", " "),
-        (dic, " ", " ", " ", " ", " ", " ", " ", dic),
+        (" ", " ", DICE_C, " ", " ", " ", DICE_C, " ", " "),
+        (DICE_C, " ", " ", " ", " ", " ", " ", " ", DICE_C),
         # three
-        (" ", " ", dic, " ", dic, " ", dic, " ", " "),
-        (dic, " ", " ", " ", dic, " ", " ", " ", dic),
+        (" ", " ", DICE_C, " ", DICE_C, " ", DICE_C, " ", " "),
+        (DICE_C, " ", " ", " ", DICE_C, " ", " ", " ", DICE_C),
         # four
-        (dic, " ", dic, " ", " ", " ", dic, " ", dic),
+        (DICE_C, " ", DICE_C, " ", " ", " ", DICE_C, " ", DICE_C),
         # five
-        (dic, " ", dic, " ", dic, " ", dic, " ", dic),
+        (DICE_C, " ", DICE_C, " ", DICE_C, " ", DICE_C, " ", DICE_C),
         # six
-        (dic, " ", dic, dic, " ", dic, dic, " ", dic),
-        (dic, dic, dic, " ", " ", " ", dic, dic, dic)
+        (DICE_C, " ", DICE_C, DICE_C, " ", DICE_C, DICE_C, " ", DICE_C),
+        (DICE_C, DICE_C, DICE_C, " ", " ", " ", DICE_C, DICE_C, DICE_C)
     )
 
     random_dice = randint(0, len(dice_positions)-1)
@@ -113,8 +113,8 @@ def dice_dot_count(dice: str):
     """calculate the overall,
     dots that show in the dice."""
 
-    DICE = '●'  # dice_char
-    return dice.count(DICE)
+    DICE_CHAR = '●'  # dice_char
+    return dice.count(DICE_CHAR)
 
 
 def main():
