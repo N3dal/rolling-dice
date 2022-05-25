@@ -153,6 +153,16 @@ def usr_choice_input(msg: str = ""):
 
 def main():
     """"""
+    user_name = welcome_screen()
+
+    while ask("Start Rolling the Dices? [Y]es/[N]o: "):
+        clear()
+        usr_choice = usr_choice_input("Choose number between 2 and 12: ")
+        dice_game(2, usr_choice=usr_choice, usr_name=user_name)
+        if ask("Rollin Again? [Y]es/[N]o, enter[E]xit if you want to quit:"):
+            continue
+        else:
+            break
 
 
 if __name__ == "__main__":
