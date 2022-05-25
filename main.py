@@ -35,6 +35,20 @@ def clear():
         system("cls")
 
 
+clear()
+
+
+def welcome_screen():
+    """asking the user about the name and getting,
+    the name also using this function."""
+
+    print("(Rolling Dice)".center(120, "-"))
+
+    return input("\nEnter your name please: ".strip())
+
+
+
+
 def main():
     """"""
 
