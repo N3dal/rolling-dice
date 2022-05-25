@@ -47,6 +47,17 @@ def welcome_screen():
     return input("\nEnter your name please: ".strip())
 
 
+def ask(msg: str):
+    """ask the players,if they want to play again, or if they want to exit.
+    this function will ask question, and depending on that question,
+    the answer will be "yes" or "no", or 'n', 'y'.
+    and after that return True if the answer, is "yes", and return False if the answer,
+    is "no", any thing except "yes", 'y', will consider as "no".
+    first remove the colon, and then add it.
+    if the user forget about it we will ad it."""
+
+    msg = msg.strip(':')+": "
+    return True if input(msg).strip().lower() in ("yes", 'y') else False
 
 
 def main():
