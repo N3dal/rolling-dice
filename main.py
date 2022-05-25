@@ -22,6 +22,8 @@ from os import system
 from os import name as OS_NAME
 from time import sleep as delay
 
+# TODO: let the user change the dice char.
+
 
 def clear():
     """wipe the terminal screen."""
