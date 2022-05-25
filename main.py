@@ -109,6 +109,14 @@ def dice_generator():
     return dice(*dice_positions[random_dice])
 
 
+def dice_dot_count(dice: str):
+    """calculate the overall,
+    dots that show in the dice."""
+
+    DICE = '●'  # dice_char
+    return dice.count(DICE)
+
+
 def main():
     """"""
 
