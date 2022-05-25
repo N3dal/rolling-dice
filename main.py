@@ -138,6 +138,19 @@ def dice_game(dice_count: int = 1, usr_choice=None, usr_name=None):
           dices_sum else f"Good luck next time '{usr_name.capitalize()}'.")
 
 
+def usr_choice_input(msg: str = ""):
+    """return int value,
+    depend on the user input."""
+
+    usr_input = input(msg).strip()
+
+    try:
+        return int(usr_input)
+    except:
+        # if the user input was string or any type except numbers.
+        return -1
+
+
 def main():
     """"""
 
