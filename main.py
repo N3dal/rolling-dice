@@ -34,4 +34,10 @@ def clear():
         # for windows machines.
         system("cls")
 
-    
+
+def main():
+    """"""
+
+
+if __name__ == "__main__":
+    main()
