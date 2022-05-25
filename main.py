@@ -117,6 +117,27 @@ def dice_dot_count(dice: str):
     return dice.count(DICE_CHAR)
 
 
+def dice_game(dice_count: int = 1, usr_choice=None, usr_name=None):
+    """show to the user,
+    the dice rolling animation."""
+
+    period = 0
+    # keep generate random dice ever randint(1, 50) or for 25 times,
+    # for 2 seconds.
+    while period < randint(1, 50):
+        period += 1
+        delay(100e-3)
+        clear()
+        dices = [dice_generator() for _ in range(dice_count)]
+        print(*dices)
+        dices_sum = sum(dice_dot_count(dice) for dice in dices)
+
+    # check out if user choice is correct or not.
+    print(f"your choice:'{usr_choice}', dice sum:'{dices_sum}'")
+    print(f"Nice choice '{usr_name.capitalize()}'." if usr_choice ==
+          dices_sum else f"Good luck next time '{usr_name.capitalize()}'.")
+
+
 def main():
     """"""
 
