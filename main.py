@@ -148,7 +148,7 @@ def usr_choice_input(msg: str = ""):
 
     try:
         usr_input = int(usr_input)
-        return usr_input if usr_input in range(1, 13) else -1
+        return usr_input if usr_input in range(2, 13) else -1
 
     except ValueError:
         # if the user input was string or any type except numbers.
@@ -167,7 +167,7 @@ def usr_input_in_range(usr_choice: int):
     while usr_choice < 1:
         clear()
         usr_choice = usr_choice_input(
-            "Choose only numbers between '1' ~ '12': ")
+            "Choose only numbers between '2' ~ '12': ")
 
     return usr_choice
 
