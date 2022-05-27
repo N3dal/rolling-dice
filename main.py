@@ -23,8 +23,6 @@ from os import name as OS_NAME
 from time import sleep as delay
 
 # TODO: let the user change the dice char.
-# BUG: make sure the user enter a number when we asking about,
-# the dice count and not return a -1.
 
 
 def clear():
