@@ -149,8 +149,10 @@ def usr_choice_input(msg: str = ""):
     usr_input = input(msg).strip()
 
     try:
-        return int(usr_input)
-    except:
+        usr_input = int(usr_input)
+        return usr_input if usr_input in range(1, 13) else -1
+
+    except ValueError():
         # if the user input was string or any type except numbers.
         return -1
 
