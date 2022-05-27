@@ -152,9 +152,26 @@ def usr_choice_input(msg: str = ""):
         usr_input = int(usr_input)
         return usr_input if usr_input in range(1, 13) else -1
 
-    except ValueError():
+    except ValueError:
         # if the user input was string or any type except numbers.
         return -1
+
+
+def usr_input_in_range(usr_choice: int):
+    """make sure that the users will give us,
+    number between 1 to 12 or we will keep,
+    asking them to enter number between 1 to 12,
+    and this will also handle other types that,
+    the user can give for us.
+
+    this work as Guard-Condition."""
+
+    while usr_choice < 1:
+        clear()
+        usr_choice = usr_choice_input(
+            "Choose only numbers between '1' ~ '12': ")
+
+    return usr_choice
 
 
 def main():
@@ -163,9 +180,15 @@ def main():
 
     while ask("Start Rolling the Dices? [Y]es/[N]o: "):
         clear()
+
         usr_choice = usr_choice_input("Choose number between 2 and 12: ")
+
+        # guard condition.
+        usr_choice = usr_input_in_range(usr_choice)
+
         dice_game(2, usr_choice=usr_choice, usr_name=user_name)
-        if ask("Rollin Again? [Y]es/[N]o, enter[E]xit if you want to quit:"):
+
+        if ask("\nRolling Again? [Y]es/[N]o, enter[E]xit if you want to quit:"):
             continue
         else:
             break
