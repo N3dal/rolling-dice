@@ -23,6 +23,7 @@ from os import name as OS_NAME
 from time import sleep as delay
 
 # TODO: let the user change the dice char.
+# TODO: add colors to the dices and the text in this game using term-color module and add some ascii art.
 
 
 def clear():
