@@ -11,7 +11,7 @@ the previous screenshot was taken from **Linux machine**, and
 the game appearance may be different depending on your **Operating-System**.
 
 for **Windows machines** the game will not work and that because i use,
-som special [Uni-code characters](https://en.wikipedia.org/wiki/Box-drawing_character) to draw the Dices.
+some special [Uni-code characters](https://en.wikipedia.org/wiki/Box-drawing_character) to draw the Dices.
 
 
 ### To-Do
