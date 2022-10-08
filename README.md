@@ -1,6 +1,5 @@
 # Rolling Dice Game
-
-<p align="center">
+<p align="right">
 <img src = "./src/roll_dice_wallpaper02.gif" />
 </p>
 
