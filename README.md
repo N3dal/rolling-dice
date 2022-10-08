@@ -1,4 +1,4 @@
-# Rolling Dice Game
+Rolling Dice Game
 <p align="right">
 <img src = "./src/roll_dice_wallpaper02.gif" />
 </p>
