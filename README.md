@@ -1,15 +1,11 @@
-Rolling Dice Game
-<div>
-<p align="right">
-<img src = "./src/roll_dice_wallpaper02.gif" />
-</p>
-<p align="left">
-<img src = "./src/roll_dice_wallpaper02.gif" />
-</p>
+## Rolling Dice Game
+
 <p align="center">
 <img src = "./src/roll_dice_wallpaper02.gif" />
 </p>
-</div>
+
+
+
 Rolling dice game in terminal build with ![python](https://img.shields.io/badge/python-3.x-green) and ![love](https://img.shields.io/badge/love-%F0%9F%96%A4%20-red).
 
 ## Demo
